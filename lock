@@ -1,3 +1,4 @@
 #!/bin/bash
+shopt -s extglob
 zip -r vault.zip . -e -x "vault*.zip"
-rm -rf !vault*.zip
+rm -rf !(vault*.zip)
