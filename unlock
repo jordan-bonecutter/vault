@@ -1,0 +1,2 @@
+#!/bin/bash
+unzip vault.zip && mv vault.zip vault_`date +%s`.zip
