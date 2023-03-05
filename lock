@@ -1,4 +1,8 @@
 #!/bin/bash
+
+read -p "Remove src directory after locking (default=n) [y/n] ?: " remove_dir
 shopt -s extglob
 zip -r vault.zip . -e -x "vault*.zip"
-rm -rf !(vault*.zip)
+if [[ "$remove_dir" == "y" ]]; then
+  rm -rf !(vault*.zip)
+fi
